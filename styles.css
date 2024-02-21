@@ -1,0 +1,35 @@
+#stack-container {
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  width: 270px;
+}
+#additional-text1 {
+  color: green;
+}
+#additional-text2 {
+  color: green;
+}
+.stack-element {
+  display: block;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+  .stack-heading {
+    color: blue; /* Change the color to your desired color */
+  }
+@media only screen and (max-width: 600px) {
+  /* CSS rules for screens up to 600px wide (typically smartphones) */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* CSS rules for screens between 601px and 1024px wide (typically tablets) */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* CSS rules for screens wider than 1024px (typically desktops and laptops) */
+}
+

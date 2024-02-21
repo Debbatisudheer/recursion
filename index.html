@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Stack</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form id="number-form">
+  <label for="number">Enter a number (max 5):</label>
+  <input type="number" id="number" name="number" min="1" max="5" required>
+  <button type="submit">Generate Stack</button>
+</form>
+
+<div id="stack-title">numbers pushed into Stack</div>
+<div id="stack-container"></div>
+
+<!-- Additional HTML text below the stack container -->
+<div id="additional-text">
+  <p>Each stack frame represents a function call, with the function name and the value of n.</p>
+  <p>new stack frames being added on top as the recursion progresses.</p>
+  <p>The base case (factorial(0)) is reached at the bottom of the stack, where the recursion stops and the function returns 1.</p>
+  <p>As the function calls return, the stack frames are popped off one by one until the original function call is completed.</p>
+  <p>At the top of the stack, we have the function call factorial(5), which corresponds to the initial function call with the value of n being 5. Therefore, the number at the top of the stack is 5.</p>
+  <p>Once the stack is created and the top number is 5, the next process begins by evaluating the factorial function for n = 5</p>
+ <div id="additional-text1">
+   <p>Stack Frame 5: factorial(5) ← Current Stack Frame (Top of Stack) <br>
+     (n = 5)</p>
+  <p>Stack Frame 4: factorial(4) <br>
+     (n = 4)</p>
+  <p>Stack Frame 3: factorial(3) <br>
+     (n = 3)</p>
+  <p>Stack Frame 2: factorial(2) <br>
+     (n = 2)</p>
+  <p>Stack Frame 1: factorial(1) <br>
+     (n = 1)</p>
+  <p>Base Case: factorial(0) <br>
+     (n = 0) <br>
+     Returns 1</p>
+    </div>
+
+  <p>The current stack frame is factorial(5), and the next step is to evaluate this function call.</p>
+  <p>Inside factorial(5), a recursive call is made to factorial(4), which adds a new stack frame on top of the current one.</p>
+  <p>This process continues recursively until the base case factorial(0) is reached.</p>
+  <p>After reaching the base case, the recursion starts unwinding, with each function call returning and using the returned value in its computation.</p>
+  <p>Eventually, the final result is computed and returned by the original function call factorial(5) at the top of the stack.</p>
+<div id="additional-text2">
+  <p>Base Case: factorial(0)</p>
+  <p>(n = 0)</p>
+  <p>Returns 1</p>
+
+  <p>Stack Frame 1: factorial(1)</p>
+  <p>(n = 1)</p>
+  <p>Returns 1 * 1 = 1</p>
+
+  <p>Stack Frame 2: factorial(2)</p>
+  <p>(n = 2)</p>
+  <p>Returns 1 * 2 = 2</p>
+
+  <p>Stack Frame 3: factorial(3)</p>
+  <p>(n = 3)</p>
+  <p>Returns 2 * 3 = 6</p>
+
+  <p>Stack Frame 4: factorial(4)</p>
+  <p>(n = 4)</p>
+  <p>Returns 6 * 4 = 24</p>
+
+  <p>Stack Frame 5: factorial(5)  ← Current Stack Frame (Top of Stack)</p>
+  <p>(n = 5)</p>
+  <p>Returns 24 * 5 = 120</p>
+  </div>
+  <p>The unwinding process involves multiplying the returned value of each function call with the value of n in the current stack frame. This multiplication occurs as the recursion unwinds from the base case up to the original function call.</p>
+</div>
+</div>
+<div id="recursion-applied">
+  <h2>Recursion Applied:</h2>
+  <p>Each "Stack Frame" represents a function call to the factorial function with a specific value of n. The recursion occurs when each factorial function call invokes another factorial function with a smaller value of n. Let's break it down:</p>
+  <ul>
+    <li>Stack Frame 5: factorial(5) is the current function call at the top of the stack. It hasn't completed yet.</li>
+    <li>Stack Frame 4: Inside factorial(5), there's a call to factorial(4) with n = 4.</li>
+    <li>Stack Frame 3: Inside factorial(4), there's a call to factorial(3) with n = 3.</li>
+    <li>Stack Frame 2: Inside factorial(3), there's a call to factorial(2) with n = 2.</li>
+    <li>Stack Frame 1: Inside factorial(2), there's a call to factorial(1) with n = 1.</li>
+    <li>Base Case: Inside factorial(1), there's a call to factorial(0) with n = 0. This is the base case, and the recursion stops here.</li>
+  </ul>
+  <p>So, each factorial function call is calling itself with a smaller value of n until it reaches the base case (factorial(0)), at which point the recursion stops. Then, the function calls start returning values back up the call stack until the original function call (factorial(5)) completes. This process demonstrates recursion in action.</p>
+</div>
+<div id="recursion-explanation">
+  <h2>Recursion Applied:</h2>
+  <p>In this breakdown:</p>
+  <ul>
+    <li>Base Case: factorial(0) is the base case, where the recursion stops. When n = 0, the function returns 1.</li>
+    <li>Stack Frame 1: Inside factorial(1), the function returns 1 * 1 = 1.</li>
+    <li>Stack Frame 2: Inside factorial(2), the function returns 1 * 2 = 2.</li>
+    <li>Stack Frame 3: Inside factorial(3), the function returns 2 * 3 = 6.</li>
+    <li>Stack Frame 4: Inside factorial(4), the function returns 6 * 4 = 24.</li>
+    <li>Stack Frame 5: Inside factorial(5), the function returns 24 * 5 = 120.</li>
+  </ul>
+  <p>Recursion occurs when each factorial function call invokes another factorial function with a smaller value of n. The process continues until it reaches the base case, at which point the recursion stops and the function calls start returning values back up the call stack until the original function call (factorial(5)) completes.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
